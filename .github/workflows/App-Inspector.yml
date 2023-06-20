@@ -18,8 +18,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        
       - name: Execute scan
         uses: microsoft/ApplicationInspector-Action@v1
+        
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
