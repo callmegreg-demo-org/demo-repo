@@ -17,6 +17,8 @@ jobs:
       security-events: write
     steps:
       - uses: microsoft/ApplicationInspector-Action@v1
+        with:
+          file-path-exclusions: 'none'
       - uses: actions/upload-artifact@v2
         with:
           name: AppInspectorResults
