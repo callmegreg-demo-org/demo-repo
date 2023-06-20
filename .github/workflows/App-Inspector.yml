@@ -1,0 +1,19 @@
+name: Application Inspector
+
+on:
+  push:
+    branches: 'main'
+  pull_request:
+    branches: 'main'
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    name: analyze code
+    runs-on: 'ubuntu-latest'
+    steps:
+      - uses: microsoft/ApplicationInspector-Action@v1
+      - uses: actions/upload-artifact@v2
+        with:
+          name: AppInspectorResults
+          path: AppInspectorResults.json
