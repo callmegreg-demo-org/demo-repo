@@ -21,7 +21,7 @@ jobs:
       - name: Execute scan
         uses: microsoft/ApplicationInspector-Action@v1
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: AppInspectorResults
           path: AppInspectorResults.json
