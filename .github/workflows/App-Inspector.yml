@@ -21,9 +21,11 @@ jobs:
         
       - name: Execute scan
         uses: microsoft/ApplicationInspector-Action@v1
+        with:
+          output-format: 'sarif'
         
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: AppInspectorResults
-          path: AppInspectorResults.json
+          path: AppInspectorResults.sarif
