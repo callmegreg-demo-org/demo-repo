@@ -81,3 +81,10 @@ jobs:
       uses: github/codeql-action/analyze@v2
       with:
         category: "/language:${{matrix.language}}"
+        output: "code-scanning-results-${{ matrix.language }}"
+        
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: "CodeScanningResults${{ matrix.language }}"
+        path: "code-scanning-results-${{ matrix.language }}"
