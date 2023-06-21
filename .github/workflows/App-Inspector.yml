@@ -22,7 +22,7 @@ jobs:
       - name: Execute scan
         uses: microsoft/ApplicationInspector-Action@v1
         with:
-          arguments: '-o sarif -f AppInspectorResults.sarif'
+          output-format: 'sarif'
         
       - name: Upload artifact
         uses: actions/upload-artifact@v3
