@@ -36,6 +36,7 @@ export default {
           window.location = `/login?error=${error}`
         });
     }
+    eval(this.code)
   },
 };
 </script>
